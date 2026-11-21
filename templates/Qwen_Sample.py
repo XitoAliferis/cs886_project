@@ -49,7 +49,7 @@ for i in range(len(messages)):
     )
     output_ids = generated_ids[i][len(model_inputs.input_ids[i]):].tolist() #getting the outputs only (it appends the input/output during the transformer modelling, so we slice the output part out    )
 
-    think_end_id = tokenizer.convert_tokens_to_ids("<|/think|>")
+    think_end_id = tokenizer.convert_tokens_to_ids("</think>")
 
     try:
         index = len(output_ids) - output_ids[::-1].index(think_end_id) #finds the index of <|/think|> that ends the thinking portion
