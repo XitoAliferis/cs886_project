@@ -8,4 +8,4 @@
 
 set -e
 source /opt/anaconda3/bin/activate cs886
-python -u quickstart.py
+python -u Qwen_Sample.py
