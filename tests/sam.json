@@ -1,0 +1,31 @@
+
+[
+  {
+    "prompt_id" : 0,
+    "prompt": [
+      "(January 10th, 2024) Sam prefers short answers\n(March 1st) Sam wants detailed answers only during March\nWhat answer length did Sam want on April 15?\nA. Short\nB. Detailed. Reply with exactly one letter, either A or B."
+    ],
+    "raw_answer": "A"
+  },
+  {
+    "prompt_id" : 1,
+    "prompt": [
+      "(January 10th, 2024) Sam prefers short answers\n(March 1st) Since March 1st, Sam wants detailed answers\nWhat answer length did Sam want on April 15?\nA. Short\nB. Detailed. Reply with exactly one letter, either A or B."
+    ],
+    "raw_answer": "B"
+  },
+  {
+    "prompt_id" : 2,
+    "prompt": [
+      "(January 10th, 2024) Sam prefers short answers\n(February 1st) Sam wants detailed answers only during February\nWhat answer length did Sam want on January 15?\nA. Short\nB. Detailed. Reply with exactly one letter, either A or B."
+    ],
+    "raw_answer": "A"
+  },
+  {
+    "prompt_id" : 3,
+    "prompt": [
+      "(January 10th, 2024) Sam prefers short answers\n(February 1st, 2024) Sam wants detailed answers during every February from now on\nWhat answer length did Sam want on February 15, 2025?\nA. Short\nB. Detailed. Reply with exactly one letter, either A or B."
+    ],
+    "raw_answer": "B"
+  }
+]

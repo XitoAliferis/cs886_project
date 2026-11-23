@@ -28,3 +28,6 @@ sbatch run.sbatch
 ### code documentation/steps
 1. quickstart.py
 - https://huggingface.co/Qwen/Qwen3-0.6B#quickstart
+2. i then made inference.py and main.py, just creating a class to define which model we want and a runner function to make it easier to laod multiple models
+3. then i created a simple testing scenario and files, scoring.py scores the outputs from inference.py, and evaluate just combines that into a single function of running and scoring so we can just say evaluater.evaluate("model_name") and get results
+4. i create sample "sam_predictions" where sam has preferences that span random time periods and we see if the model holds that up correctly

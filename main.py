@@ -1,9 +1,5 @@
-from temporal_eval.inference import Runner
+from temporal_eval.scoring import Scoring
 
-runner = Runner("Qwen/Qwen3-0.6B")
+scoring = Scoring("tests/sam.json")
 
-inputs = [
-    "testing does this work?",
-    "what's 9+10?"
-]
-runner.run(inputs)
+results = scoring.evaluate("Qwen/Qwen3-0.6B", False, 16)

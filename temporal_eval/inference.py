@@ -15,14 +15,27 @@ class Runner:
             }] for i in inputs
         ]
 
-        text = [self.tokenizer.apply_chat_template(m, tokenize=False, add_generation_prompt=True, enable_thinking=thinking) for m in messages]
-        model_inputs = self.tokenizer(text, padding=True, add_special_tokens=False, return_tensors="pt").to(self.model.device)
+        text = [
+            self.tokenizer.apply_chat_template(
+                m, 
+                tokenize=False, 
+                add_generation_prompt=True, 
+                enable_thinking=thinking
+            ) for m in messages
+        ]
+        model_inputs = self.tokenizer(
+            text, 
+            padding=True, 
+            add_special_tokens=False, 
+            return_tensors="pt"
+        ).to(self.model.device)
 
         generated_ids = self.model.generate(
             **model_inputs,
             max_new_tokens=max_new_tokens
         )
-        
+        output = []
+
         for i in range(len(inputs)):
             output_ids = generated_ids[i][len(model_inputs.input_ids[i]):].tolist()
 
@@ -38,3 +51,10 @@ class Runner:
 
             print("thinking content:", thinking_content)
             print("content:", content)
+            
+            output.append({
+                "thinking content" : thinking_content,
+                "content" : content
+            })
+
+        return output
