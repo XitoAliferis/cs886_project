@@ -32,7 +32,8 @@ class Runner:
 
         generated_ids = self.model.generate(
             **model_inputs,
-            max_new_tokens=max_new_tokens
+            max_new_tokens=max_new_tokens,
+            do_sample=False
         )
         output = []
 
